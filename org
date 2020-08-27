@@ -1,0 +1,10 @@
+#!/bin/sh
+ebooks=~/Documents/ebooks/
+epubs="$ebooks"/epub
+[ ! -f "$epubs" ] && mkdir -p "$epubs"
+
+for i in ~/Downloads/*.epub
+do
+mv "$i" "$epubs"
+done
+
