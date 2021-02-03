@@ -1,10 +1,17 @@
 #!/bin/sh
+dowloads=/home/cko/Downloads
 ebooks=~/Documents/ebooks/
 epubs="$ebooks"/epub
+pdfs="$ebooks"/pdf
+isos=~/Downloads/ISO
+
 [ ! -f "$epubs" ] && mkdir -p "$epubs"
+[ ! -f "$pdfs" ] && mkdir -p "$pdfs"
+[ ! -f "$isos" ] && mkdir -p "$isos"
 
-for i in ~/Downloads/*.epub
-do
-mv "$i" "$epubs"
-done
-
+find "${dowloads}" -maxdepth 1 -type f  -name  "*(z-lib.org).pdf" \
+    -exec mv -t "${pdfs}" {} +
+find "${dowloads}"  -maxdepth 1 -type f  -name  "*.epub" \
+    -exec mv -t "${epubs}" {} +
+find "${dowloads}"  -maxdepth 1 -type f  -name  "*.iso" \
+    -exec mv -t "${isos}" {} +
