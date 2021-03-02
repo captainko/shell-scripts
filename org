@@ -15,3 +15,7 @@ find "${dowloads}"  -maxdepth 1 -type f  -name  "*.epub" \
     -exec mv -t "${epubs}" {} +
 find "${dowloads}"  -maxdepth 1 -type f  -name  "*.iso" \
     -exec mv -t "${isos}" {} +
+
+# remove old-ass files
+
+find  "$dowloads" -maxdepth 1 -type f -atime +30 -delete

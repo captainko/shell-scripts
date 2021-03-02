@@ -1,0 +1,16 @@
+#!/bin/sh
+
+function z() {
+    file=$1
+    projects_path="$HOME/Documents/Projects"
+
+    case $file in
+
+        w)
+            cd "$HOME/Documents/Projects/Horizon/src/web/WebHorizon";
+            ;;
+        a)
+            cd "$HOME/Documents/Projects/pullman/Server/api/"
+            ;;
+    esac
+}

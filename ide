@@ -1,0 +1,5 @@
+#!/bin/sh
+# tmux split-window -v -p 30
+# tmux split-window -h -p 60
+# tmux split-window -h -p 50
+tmux new-session \; split-window -v -p 30 \; split-window -h -p 68 \; split-window -h -p 50\; select-pane -t 1
