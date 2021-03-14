@@ -12,5 +12,8 @@ function z() {
         a)
             cd "$HOME/Documents/Projects/pullman/Server/api/"
             ;;
+        n)
+            cd "$HOME/.local/src/neovim"
+            ;;
     esac
 }
