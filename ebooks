@@ -12,8 +12,7 @@ selected=$(find ~/Downloads ~/Documents/ebooks/ ~/Documents/iot_projects -type f
 [ -z "$selected" ] && exit
 [ ! -f "$selected" ] && notify-send "$selected not found!" && exit
 
-# ebook-viewer "$selected" 2>/dev/null &
-zathura $"selected"  2>/dev/null &
+ebook-viewer "$selected" 2>/dev/null &
 echo "$selected" | xclip -selection c &
 exit
 

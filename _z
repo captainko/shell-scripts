@@ -23,6 +23,8 @@ function z() {
 
         eb) cd "$HOME/Documents/ebooks/" ;;
 
+        go) cd "$HOME/Documents/go_projects/" ;;
+
         s) cd "$HOME/.scripts/"
     esac
 }
