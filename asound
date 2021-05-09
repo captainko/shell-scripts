@@ -24,7 +24,6 @@ choice=$(printf '%s\n' "${opts[@]}" | dmenu -i -l 7 -p 'Ambient sounds:' "${@}")
 
 title="ambient-sound"
 
-echo "$title"
 # If user chooses a sound file.
 if [ "$choice" == "$opt_choose_file" ]; then
   # Piping the soundList array into dmenu.
