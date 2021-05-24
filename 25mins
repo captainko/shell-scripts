@@ -1,4 +1,4 @@
-#/bin/sh
+#!/bin/sh
 
 termdown 25m
 notify-send -a "25 minutes alarm" "LOL"

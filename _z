@@ -7,7 +7,7 @@ function z() {
     case $file in
         l) cd "$HOME/Documents/Latex"; ;;
 
-        v) cd "$HOME/Documents/Projects/pullman"; ;;
+        # v) cd "$HOME/Documents/Projects/pullman"; ;;
 
         w) cd "$HOME/Documents/Projects/Horizon/src/web/WebHorizon"; ;;
 
@@ -24,6 +24,17 @@ function z() {
         eb) cd "$HOME/Documents/ebooks/" ;;
 
         go) cd "$HOME/Documents/go_projects/" ;;
+
+        v) cd "$HOME/Documents/Projects/clubv-worktree/api" ;;
+
+        va) cd "$HOME/Documents/Projects/clubv-worktree/api/Server/api" ;;
+        vd) cd "$HOME/Documents/Projects/clubv-worktree/worktrees/deploy/Server/api" ;;
+
+        vf) cd "$HOME/Documents/Projects/clubv-worktree/frontend";;
+
+        vfa) cd "$HOME/Documents/Projects/clubv-worktree/frontend/Admin";;
+
+        vfc) cd "$HOME/Documents/Projects/clubv-worktree/frontend/Client";;
 
         s) cd "$HOME/.scripts/"
     esac
