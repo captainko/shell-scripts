@@ -5,13 +5,19 @@ function z() {
     projects_path="$HOME/Documents/Projects"
 
     case $file in
+        doc) cd "$HOME/Documents"; ;;
+
         l) cd "$HOME/Documents/Latex"; ;;
+
+        or) cd "$HOME/Documents/org"; ;;
 
         # v) cd "$HOME/Documents/Projects/pullman"; ;;
 
         w) cd "$HOME/Documents/Projects/Horizon/src/web/WebHorizon"; ;;
 
-        pg) cd "$HkME"/Documents/psg_project/learning ;;
+        q) cd "$HOME/Documents/queries" ;;
+
+        pg) cd "$HOME/Documents/psg_project/learning" ;;
 
         7) cd "$HOME/Documents/Projects/quany7a/"; ;;
 
