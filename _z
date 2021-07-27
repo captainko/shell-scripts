@@ -1,47 +1,29 @@
-#!/bin/sh
+# !/bin/sh
+SList=(
+    "7:$HOME/code/Projects/quany7a/"
+    "7a:$HOME/code/Projects/quany7a/api/"
+    "a:$HOME/code/Projects/clubv/Server/api/"
+    "doc:$HOME/Documents"
+    "eb:$HOME/Documents/ebooks/"
+    "go:$HOME/code/go_projects/"
+    "l:$HOME/Documents/Latex"
+    "n:$HOME/.local/src/neovim"
+    "no:$HOME/code/node_projects/notion-ts"
+    "or:$HOME/Documents/org"
+    "pg:$HOME/code/psg_project/learning"
+    "q:$HOME/Documents/queries"
+    "s:$HOME/.scripts/"
+    "w:$HOME/code/Projects/Horizon/src/web/WebHorizon"
+)
 
-function z() {
-    file=$1
-    projects_path="$HOME/Documents/Projects"
+# Loop over shortcuts
+for s in ${SList[@]}
+do
+    # check sub-list if available
+    if [[ $s == *":"* ]]; then
+        prefix="${s%:*}"
+        suffix="${s#*:}"
 
-    case $file in
-        doc) cd "$HOME/Documents"; ;;
-
-        l) cd "$HOME/Documents/Latex"; ;;
-
-        or) cd "$HOME/Documents/org"; ;;
-
-        # v) cd "$HOME/Documents/Projects/pullman"; ;;
-
-        w) cd "$HOME/Documents/Projects/Horizon/src/web/WebHorizon"; ;;
-
-        q) cd "$HOME/Documents/queries" ;;
-
-        pg) cd "$HOME/Documents/psg_project/learning" ;;
-
-        7) cd "$HOME/Documents/Projects/quany7a/"; ;;
-
-        7a) cd "$HOME/Documents/Projects/quany7a/api/"; ;;
-
-        a) cd "$HOME/Documents/Projects/pullman/Server/api/"; ;;
-
-        n) cd "$HOME/.local/src/neovim"; ;;
-
-        eb) cd "$HOME/Documents/ebooks/" ;;
-
-        go) cd "$HOME/Documents/go_projects/" ;;
-
-        v) cd "$HOME/Documents/Projects/clubv-worktree/api" ;;
-
-        va) cd "$HOME/Documents/Projects/clubv-worktree/api/Server/api" ;;
-        vd) cd "$HOME/Documents/Projects/clubv-worktree/worktrees/deploy/Server/api" ;;
-
-        vf) cd "$HOME/Documents/Projects/clubv-worktree/frontend";;
-
-        vfa) cd "$HOME/Documents/Projects/clubv-worktree/frontend/Admin";;
-
-        vfc) cd "$HOME/Documents/Projects/clubv-worktree/frontend/Client";;
-
-        s) cd "$HOME/.scripts/"
-    esac
-}
+        alias z"$prefix"="cd $suffix"
+    fi
+done
